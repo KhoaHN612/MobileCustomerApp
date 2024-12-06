@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "252379279343",
+    "firebase_url": "https://fir-project-9b700-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fir-project-9b700",
+    "storage_bucket": "fir-project-9b700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252379279343:android:077934fd4a87f545af501a",
+        "android_client_info": {
+          "package_name": "com.example.coursework"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVJLrLGr4VDw1UriiQ6FihxUQ1N9xxB_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252379279343:android:3fac242ab613df23af501a",
+        "android_client_info": {
+          "package_name": "com.example.firebaseproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVJLrLGr4VDw1UriiQ6FihxUQ1N9xxB_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

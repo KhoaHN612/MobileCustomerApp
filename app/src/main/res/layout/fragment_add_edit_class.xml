@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Manage Classes" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInputSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topAppBarClass">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/toggleInputContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- Add New Class Text -->
+                    <TextView
+                        android:id="@+id/toggleInputSection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="4dp"
+                        android:text="Add New Class"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:textColor="?attr/colorPrimary" />
+
+                    <!-- Expand/Collapse Icon -->
+                    <ImageView
+                        android:id="@+id/expandIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_expand_more" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collapsibleSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <!-- Date Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputDateLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Date for Class">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Input Number of Classes to Add -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputNumberClassesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Number of Classes">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputNumberClasses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Add Class Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Add Class" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Collapsible Section -->
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- RecyclerView for Classes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewClasses"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSubmitClasses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardInputSection" />
+
+        <!-- Submit Classes Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitClasses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Classes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
